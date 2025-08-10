@@ -6,7 +6,10 @@ interface HeroProps { featured: Movie }
 
 const Hero = ({ featured }: HeroProps) => {
   return (
-    <section aria-label="Featured" className="relative aspect-[16/9] w-full overflow-hidden rounded-b-lg">
+    <section
+      aria-label="Featured"
+      className="relative aspect-[16/9] w-full overflow-hidden rounded-b-lg"
+    >
       <img
         src={featured.image}
         alt={`${featured.title} hero banner`}
@@ -18,12 +21,14 @@ const Hero = ({ featured }: HeroProps) => {
       <div className="relative z-10 container h-full flex items-end pb-12">
         <div className="max-w-2xl animate-fade-in">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3">
-            StreamBox – Netflix‑style Streaming UI
+            Meet Monkey D. Luffy: One Piece
           </h1>
           <h2 className="text-xl md:text-2xl font-semibold text-foreground/90 mb-2">
-            {featured.title}
+            Oda
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground mb-4">{featured.genre} • Featured Today</p>
+          <p className="text-sm md:text-base text-muted-foreground mb-4">
+            {featured.genre} • Featured Today
+          </p>
           <div className="flex gap-3">
             <Button size="lg" className="hover-scale">
               <Play className="mr-2" /> Play
